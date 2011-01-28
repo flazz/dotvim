@@ -21,7 +21,7 @@ set expandtab smarttab shiftwidth=2 shiftwidth=2 softtabstop=2
 filetype plugin on
 filetype indent on
 
-colorscheme jelleybeans
+colorscheme lettuce
 
 set number
 set ruler
@@ -59,4 +59,5 @@ au BufRead,BufNewFile *.md set filetype=*.mkd
 au BufRead,BufNewFile Gemfile set filetype=ruby
 au BufRead,BufNewFile *.zsh-theme set filetype=zsh
 
+runtime macros/matchit.vim
 "imap <Tab> <Esc>==i
