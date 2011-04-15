@@ -52,3 +52,6 @@
 [submodule "bundle/haskell-mode"]
 	path = bundle/haskell-mode
 	url = https://github.com/lukerandall/haskellmode-vim
+[submodule "bundle/surround"]
+	path = bundle/surround
+	url = https://github.com/tpope/vim-surround.git
