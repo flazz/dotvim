@@ -21,8 +21,6 @@ set expandtab smarttab shiftwidth=2 shiftwidth=2 softtabstop=2
 filetype plugin on
 filetype indent on
 
-colorscheme lettuce
-
 set number
 set ruler
 set cursorline
@@ -55,9 +53,19 @@ set incsearch
 let g:netrw_hide=1
 let g:netrw_list_hide='\(^\|\s\s\)\zs\.\S\+,\.o$,\.hi$,\.hspp$,\.erlc$'
 
-au BufRead,BufNewFile *.md set filetype=*.mkd
+"au BufRead,BufNewFile *.md set filetype=*.mkd
 au BufRead,BufNewFile Gemfile set filetype=ruby
 au BufRead,BufNewFile *.zsh-theme set filetype=zsh
 
 runtime macros/matchit.vim
-"imap <Tab> <Esc>==i
+
+au BufRead,BufNewFile *.ru,*.gemspec,gemspec setfiletype ruby
+au BufRead,BufNewFile Capfile,Gemfile,Gemfile.lock setfiletype ruby
+
+"'.pure' file type:
+augroup filetypedetect
+au BufNewFile,BufRead *.pure	setf pure
+augroup END
+
+au BufEnter *.hs compiler ghc
+let g:haddock_browser="open"
